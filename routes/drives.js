@@ -196,7 +196,8 @@ router.post('/:id/cancel', auth, async (req, res) => {
   }
 });
 
-// Mark attendance (marshal only)outer.post('/:id/attendance', auth, authorize('marshal', 'admin'), async (req, res) => {
+// Mark attendance (marshal only)
+router.post('/:id/attendance', auth, authorize('marshal', 'admin'), async (req, res) => {
   try {
     const { userId, status } = req.body;
     
